@@ -1,6 +1,6 @@
 package kory.karl.reflection.task01;
 
-import kory.karl.reflection.task01.annotations.DefAnno;
+import kory.karl.reflection.task01.annotations.*;
 
 import java.util.stream.IntStream;
 
