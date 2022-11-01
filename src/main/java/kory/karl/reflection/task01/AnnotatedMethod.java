@@ -8,11 +8,11 @@ public class AnnotatedMethod {
 
     //Implement method sum to calculate sum of all int args
     //Annotate it twice with @Anno annotation
-//    @Anno(5)
-//    @Anno(6)
+    @Anno(5)
+    @Anno(6)
     public int sum(int ... args){
         int result = -1;
-//        result = Arrays.stream(args).sum();
+        result = Arrays.stream(args).sum();
         return result;
     }
 
@@ -20,14 +20,14 @@ public class AnnotatedMethod {
     //use as argument value from @DefAnno annotation
     public int calculateFactorial() {
         int result = -1;
-//        Method factorial;
-//        try {
-//            factorial = Utils2.class.getDeclaredMethod("factorial", int.class);
-//        } catch (NoSuchMethodException e) {
-//            throw new RuntimeException(e);
-//        }
-//        DefAnno annotation = factorial.getAnnotation(DefAnno.class);
-//        result = Utils2.factorial(annotation.value());
+        Method factorial;
+        try {
+            factorial = Utils2.class.getDeclaredMethod("factorial", int.class);
+        } catch (NoSuchMethodException e) {
+            throw new RuntimeException(e);
+        }
+        DefAnno annotation = factorial.getAnnotation(DefAnno.class);
+        result = Utils2.factorial(annotation.value());
         return result;
     }
 }
